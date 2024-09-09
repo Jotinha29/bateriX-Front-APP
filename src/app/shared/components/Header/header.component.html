@@ -1,0 +1,16 @@
+<!-- header.component.html -->
+<header class="bg-white shadow-sm flex justify-between py-3 px-20 w-full">
+  <div class="logo-container mx-12">
+    <img src="/assets/images/logo1.png" alt="logo-1">
+  </div>
+  <nav class="flex items-center">
+    <button type="submit"><a routerLink="/home" routerLinkActive="active" class="navbar-item mx-3 text-[14px] font-semibold text-[#272a5a] cursor-pointer border-b-4 border-[#257251]">Home</a></button>
+    <button type="submit"><a routerLink="/about-us" routerLinkActive="active" class="navbar-item mx-3 text-[14px] font-semibold text-[#272a5a] cursor-pointer">Contato</a></button>
+    <button type="submit"><a routerLink="/create-account" routerLinkActive="active" class="navbar-item mx-3 text-[14px] font-semibold text-[#272a5a] cursor-pointer">Sobre Nós</a></button>
+    <button type="submit"><a routerLink="/blog" routerLinkActive="active" class="navbar-item mx-3 text-[14px] font-semibold text-[#272a5a] cursor-pointer">Blog</a></button>
+  </nav>
+  <div class="flex items-center">
+    <button routerLink="/recycling-locations" class="bg-[#257251] text-white border-none rounded px-2 py-3 text-[14px] font-semibold cursor-pointer mr-3">Locais de Descarte</button>
+    <a routerLink="/login" routerLinkActive="active" class="bg-white border-2 border-[#257251] text-[#272a5a] rounded px-0 py-3 w-[143px] text-[14px] font-semibold cursor-pointer">Login</a>
+  </div>
+</header>
