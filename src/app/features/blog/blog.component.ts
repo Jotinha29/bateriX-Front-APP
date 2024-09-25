@@ -1,0 +1,95 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Importar para usar ngFor e ngIf
+
+@Component({
+  selector: 'app-blog',
+  standalone: true,
+  imports: [CommonModule], // Importar módulos básicos do Angular para o template
+  templateUrl: './blog.component.html'
+})
+export class BlogComponent {
+
+    featuredPost = {
+        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        imageUrl: '/assets/images/coffetime.jfif',
+        tag: 'Tecnologia',
+        author: 'Victor Brito',
+        authorImage: '/assets/images/profile.webp',
+        date: '24 de Setembro, 2024',
+    };
+
+  posts = [
+    {
+        title: 'O Futuro do Trabalho com Tecnologia',
+        author: 'Emily Watson',
+        date: '20 de Setembro, 2024',
+        imageUrl: '/assets/images/pedras.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'Como a IA Está Transformando Indústrias',
+        author: 'João Silva',
+        date: '18 de Setembro, 2024',
+        imageUrl: '/assets/images/lixo.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'A Ascensão do Trabalho Remoto: Desafios e Soluções',
+        author: 'Maria Oliveira',
+        date: '15 de Setembro, 2024',
+        imageUrl: '/assets/images/praia.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: '5 Tecnologias que Estão Reformulando a Educação',
+        author: 'Carlos Pereira',
+        date: '12 de Setembro, 2024',
+        imageUrl: '/assets/images/casacomflores.png',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'Cibersegurança no Mundo Moderno',
+        author: 'Sara Costa',
+        date: '10 de Setembro, 2024',
+        imageUrl: '/assets/images/lixo3.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'O Impacto do 5G na Conectividade',
+        author: 'Miguel Souza',
+        date: '08 de Setembro, 2024',
+        imageUrl: '/assets/images/quadro.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'Tecnologia Sustentável: Inovações para um Futuro mais Verde',
+        author: 'Alice Verde',
+        date: '05 de Setembro, 2024',
+        imageUrl: '/assets/images/lixo2.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'Blockchain Além das Criptomoedas',
+        author: 'Roberto Branco',
+        date: '02 de Setembro, 2024',
+        imageUrl: '/assets/images/praia2.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+    {
+        title: 'O Futuro das Cidades Inteligentes',
+        author: 'Clara Oswald',
+        date: '30 de Agosto, 2024',
+        imageUrl: '/assets/images/lixo4.jfif',
+        authorImage: '/assets/images/profile.webp',
+        tag: 'Tech News',
+    },
+  ];
+}
