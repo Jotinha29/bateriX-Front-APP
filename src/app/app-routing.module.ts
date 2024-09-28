@@ -13,9 +13,7 @@ import { HeaderComponent } from './shared/components/Header/header.component';
       FormsModule
   ],
   declarations: [
-      AppComponent,
-      HeaderComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppRoutingModule { }
