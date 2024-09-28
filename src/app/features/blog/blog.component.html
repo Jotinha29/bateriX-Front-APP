@@ -15,22 +15,14 @@
   </div>
 
   <div class="flex items-center justify-center mb-4">
-      <div class="relative px-14 m-14 w-[1216px] h-[450px] rounded-lg shadow-lg"
-          style="background-image: url('/assets/images/coffetime.jfif'); background-position: center; background-size: cover;">
-          <!-- Overlay escuro -->
-          <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-
-          <!-- Conteúdo acima da sobreposição -->
+    <div class="relative px-14 m-14 w-[1216px] h-[450px] rounded-lg shadow-lg"
+    [style.background-image]="'url(' + featuredPost.imageUrl + ')'"
+    style="background-position: center; background-size: cover;">
           <div class="relative flex flex-col justify-end h-full z-10 pb-6">
-              <!-- Tag acima do título -->
               <span class="bg-indigo-600 text-white text-sm px-3 py-1 rounded-lg self-start mb-4">{{ featuredPost.tag }}</span>
-
-              <!-- Título principal -->
               <span class="text-white leading-[40px] break-words font-['Work Sans'] text-[36px]">
                   {{ featuredPost.title }}
               </span>
-
-              <!-- Informações do perfil -->
               <div class="mt-4 text-white flex items-center">
                   <img [src]="featuredPost.authorImage" alt="Profile" class="w-10 h-10 rounded-full mr-3">
                   <div>
@@ -43,21 +35,13 @@
   </div>
 </div>
 
-<!-- Lista de Posts -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 m-4">
-  <!-- Utilizando *ngFor para listar os posts dinamicamente -->
   <div *ngFor="let post of posts" class="bg-white w-[392px] h-[488px] m-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
       <div class="flex items-center justify-center">
           <img [src]="post.imageUrl" alt="Imagem do post" class="w-[360px] h-[240px] rounded-lg">
       </div>
-
-      <!-- Tag acima do título -->
       <span class="bg-indigo-600 text-white text-sm px-3 py-1 rounded-full self-start ml-6 mt-4 inline-block">{{ post.tag }}</span>
-      
-      <!-- Título do Post -->
       <p class="text-xl font-bold my-2 px-6">{{ post.title }}</p>
-
-      <!-- Informações do autor e data -->
       <div class="mt-4 text-gray-600 flex items-center px-6">
           <img [src]="post.authorImage" alt="Profile" class="w-8 h-8 rounded-full mr-3">
           <div>
