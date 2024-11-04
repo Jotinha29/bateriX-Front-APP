@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutComponent },
   { path: 'create-account-enterprise', component: CreateAccountEnterpriseComponent },
   { path: 'blog', component: BlogComponent},
-  // { path: 'contact-team', component: ContactTeamComponent },
+  { path: 'contact-team', component: ContactTeamComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirecionar para 'home'
   { path: '**', redirectTo: '/home' }
 ];
