@@ -1,0 +1,39 @@
+<div *ngIf="post" class="flex flex-col items-center min-h-screen py-12 bg-cover bg-center" style="background-image: url('assets/images/Background.png');">
+
+  <div class="mb-4 w-full max-w-4xl pl-8">
+    <span class="text-xs font-semibold uppercase text-white bg-blue-500 px-3 py-1 rounded">
+      {{ post.tag }}
+    </span>
+  </div>
+
+  <!-- Título do post (fora do container principal) -->
+  <h1 class="text-4xl font-bold text-gray-900 mb-4 w-full max-w-4xl pl-8">
+    {{ post.title }}
+  </h1>
+
+  <!-- Informações do autor e data (fora do container principal) -->
+  <div class="flex items-center text-gray-600 text-sm mb-6 w-full max-w-4xl pl-8">
+    <img [src]="post.authorImage" alt="Imagem do Autor" class="w-8 h-8 rounded-full mr-3">
+    <div>
+      <p class="font-medium">{{ post.author }}</p>
+      <p>{{ post.date }}</p>
+    </div>
+  </div>
+
+  <!-- Contêiner Principal para o conteúdo do post -->
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl w-full">
+    
+    <!-- Imagem principal do post -->
+    <div class="mb-6 flex justify-center">
+      <img [src]="post.imageUrl" alt="Imagem do Post" class="w-full h-[400px] object-cover rounded-lg shadow-md">
+    </div>
+
+    <!-- Conteúdo do post -->
+    <div class="text-gray-800 leading-relaxed space-y-4">
+      <p>{{ post.content }}</p>
+      <!-- Parágrafos adicionais de conteúdo -->
+      <p *ngFor="let paragraph of post.additionalContent">{{ paragraph }}</p>
+    </div>
+
+  </div>
+</div>

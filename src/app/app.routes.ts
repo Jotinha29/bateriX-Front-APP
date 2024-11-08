@@ -6,6 +6,8 @@ import { CreateAccountEnterpriseComponent } from './features/account/create-acco
 import { ContactTeamComponent } from './features/contact/contact-team/contact-team.component';
 import { AboutComponent } from './features/about/about.component';
 import { BlogComponent } from './features/blog/blog.component';
+import { BlogPostComponent } from './features/blogpost/blogpost.component';
+import { LocalDescarteComponent } from './features/local-descarte/local-descarte.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomePage },
@@ -14,7 +16,9 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutComponent },
   { path: 'create-account-enterprise', component: CreateAccountEnterpriseComponent },
   { path: 'blog', component: BlogComponent},
+  { path: 'blogpost/:id', component: BlogPostComponent },
   { path: 'contact-team', component: ContactTeamComponent },
+  { path: 'recycling-locations', component: LocalDescarteComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirecionar para 'home'
   { path: '**', redirectTo: '/home' }
 ];

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, RouterModule, HttpClientModule],
   templateUrl: './blog.component.html'
 })
 export class BlogComponent implements OnInit {

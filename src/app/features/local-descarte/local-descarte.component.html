@@ -1,0 +1,45 @@
+<div class="bg-cover bg-center" style="background-image: url('assets/images/Background.png');">
+  <div class="relative m-[0_18.9px_0_500px] flex box-sizing-border">
+    <div class="relative flex flex-row box-sizing-border">
+      <div class="m-[22.3px_56px_0_0] flex flex-col box-sizing-border">
+        <div class="relative flex self-start p-[0_7.7px_0_0] box-sizing-border">
+          <img class="absolute top-[40px] right-[120px] w-[150px] h-[13px]" src="/assets/images/vector_22_x2.svg"
+            alt="vector" />
+          <span
+            class="text-center w-[401px] break-words font-['Lora'] text-[45px] text-[#181820] leading-[1.1] drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] ">
+            Locais de Descarte
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mx-auto my-20 p-8 bg-white rounded-lg shadow-md ">
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="flex flex-col space-y-6">
+        <div *ngFor="let local of locaisDescarte"
+          class="flex w-[560px] h-[215px] bg-white rounded-lg shadow-md overflow-hidden">
+          <!-- Imagem do Local -->
+          <div class="w-2/5 h-full">
+            <img [src]="local.imagemUrl" alt="{{ local.nome }}" class="w-full h-full object-cover">
+          </div>
+          <div class="w-3/5 p-4 flex flex-col justify-between">
+            <div>
+              <h2 class="text-lg font-semibold mb-1">{{ local.nome }}</h2>
+              <p class="text-gray-600 text-sm"><strong>Endereço:</strong> {{ local.endereco }}</p>
+              <p class="text-gray-600 text-sm"><strong>Horário:</strong> {{ local.horario }}</p>
+              <p class="text-gray-600 text-sm"><strong>Telefone:</strong> {{ local.telefone }}</p>
+            </div>
+            <p class="text-blue-500 text-sm mt-2"><strong>Tipos aceitos:</strong> {{ local.tipo }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:block w-full lg:w-1/2 flex items-center justify-center">
+        <img src="/assets/images/map-placeholder.png" alt="Mapa de Localização"
+          class="w-[710px] h-[858px] object-cover rounded-lg shadow-md">
+      </div>
+    </div>
+  </div>
+</div>
